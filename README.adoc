@@ -1,0 +1,30 @@
+.Flashing the CachyOS ISO
+. Download the https://cachyos.org/download/[CachyOS Desktop Edition] ISO, then install https://etcher.balena.io/[balenaEtcher] to flash that ISO onto a USB drive, so that you can restart your PC and boot into the CachyOS live environment.
+
+.After booted into the CachyOS ISO
+. Launch the installer.
+. Choose 'Refind' for the bootloader.
+. *Partitions*: Choose the 'btrfs' partition type, and enable 'Encrypt system' with your desired password.
+. *Desktop*: Choose the 'Plasma Desktop'.
+. *Packages*: Uncheck 'Firefox and language package' and proceed.
+. *Users*: Check 'Log in automatically without asking for the password'.
+. After installation is finished, reboot and unplug the USB.
+
+.Installing Flatpaks via the Discovery app store
+. Flatpaks have better security than native Arch packages, but you still need to check what levels of isolations each Flatpak has by default, and adjust accordingly using Flatseal if desired: +
+`sudo pacman -S flatpak discover && flatpak install flathub com.github.tchx84.Flatseal`
+. Reboot, then install what applications you want using Discover, such as Vencord to use Discord.
+
+.Wine setup (makes most Windows applications compatible with Linux)
+. `sudo pacman -S wine-staging wine-mono winetricks`
+. `winetricks -q vcrun2022 dxvk allfonts nocrashdialog autostart_winedbg=disabled`
+. Now you can install the Windows version of https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe[Steam] or do whatever else you'd like using Wine. Keep in mind that Windows malware can do damage to files on Linux, unless that Wine instance is sandboxed using https://github.com/hartwork/sandwine[sandwine].
+
+.Disabling one annoyance specific to CachyOS
+Edit: `~/.config/fish/config.fish`
+----
+# Add the following:
+function fish_greeting
+end
+----
+
