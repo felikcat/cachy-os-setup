@@ -26,6 +26,10 @@
 ==== Running AppImages
 - `sudo pacman -S fuse2` and enjoy.
 
+==== Making Steam games launch much faster
+. Go to Steam Settings -> Downloads.
+. Scroll down until you see "Shader Pre-Caching", then disable "Enable Shader Pre-caching". This won't slow down the performance of games on modern GPUs, far as I know.
+
 ==== Setup for modding Morrowind, Oblivion, Skyrim, or other Bethesda games
 . `sudo pacman -S steam && flatpak install flathub com.github.Matoking.protontricks com.vysp3r.ProtonPlus`
 . Run Steam at least once and login.
