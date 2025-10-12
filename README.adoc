@@ -36,6 +36,10 @@
 . Install the latest Proton-EM through ProtonPlus, then restart Steam.
 . Download the latest AppImage of https://github.com/Omni-guides/Jackify[Jackify] and run it, this is what'll install the mods (for Wabbajack based modpacks).
 
+==== GPU management (undervolting, overclocking, fan control, power state control)
+. `sudo pacman -S lact && sudo systemctl enable --now lactd.service`
+. Open LACT, click on 'OC', then 'Enable AMD Overclocking' (or whatever it's called for your GPU), then reboot after it says to.
+
 ==== Disabling one annoyance specific to CachyOS
 - Edit: `~/.config/fish/config.fish`
 ----
