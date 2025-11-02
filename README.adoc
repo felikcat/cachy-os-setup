@@ -1,5 +1,14 @@
+:experimental:
 :toc:
 :toclevel: 4
+ifdef::env-github[]
+:icons:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
 ==== 1. Flashing the CachyOS ISO
 . Download the https://cachyos.org/download/[CachyOS Desktop Edition] ISO, then install https://etcher.balena.io/[balenaEtcher] to flash that ISO onto a USB drive, so that you can restart your PC and boot into the CachyOS live environment.
@@ -48,3 +57,14 @@ function fish_greeting
 end
 ----
 
+==== Installing a good anti-malware product
+TIP: Recommended for risky environments, such as web development. +
+If you aren't isolating everything potentially dangerous in a virtual machine or sandboxing solution like sandwine or bubblewrap, using Dr.Web is a good idea. +
+- It is $38 USD a year for 5 devices.
+
+. Download the https://products.drweb.com/home/linux/[Dr.Web Security Space] trial.
+. Use "Free download (64-bit)".
+. `chmod +x ~/Downloads drweb*.run`
+. `./Downloads/drweb-*.run`
+. Make sure "I want to connect to Dr.Web Cloud" is checked before installing.
+. Run Dr.Web for Linux and enable SpIDer Guard and SpIDer Gate. If you have any connection issues after doing this, disable SpIDer Gate.
