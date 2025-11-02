@@ -68,3 +68,7 @@ If you aren't isolating everything potentially dangerous in a virtual machine or
 . `./Downloads/drweb-*.run`
 . Make sure "I want to connect to Dr.Web Cloud" is checked before installing.
 . Run Dr.Web for Linux and enable SpIDer Guard and SpIDer Gate. If you have any connection issues after doing this, disable SpIDer Gate.
+
+==== Setting up VR / Virtual Reality
+
+See my tutorial on https://github.com/felikcat/unofficial-resonite-wiki/blob/main/pages/Running%20on%20Linux.adoc[running Resonite on Linux].
